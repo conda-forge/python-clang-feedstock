@@ -1,4 +1,4 @@
-{% set version = "5.0.0" %}
+{% set version = "4.0.1" %}
 
 package:
   name: python-clang
@@ -6,7 +6,7 @@ package:
 
 source:
   url: http://llvm.org/releases/{{ version }}/cfe-{{ version }}.src.tar.xz
-  sha256: 019f23c2192df793ac746595e94a403908749f8e0c484b403476d2611dd20970
+  sha256: 61738a735852c23c3bdbe52d035488cdb2083013f384d67c1ba36fabebd8769b
 
 build:
   number: 0
@@ -17,10 +17,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python =2
   run:
-    - python
-    - clangdev =={{ version }}
+    - python =2
+    - clang =={{ version }}
 
 test:
   requires:
